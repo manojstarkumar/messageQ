@@ -12,14 +12,6 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"
 default-init-method="start" 
   default-destroy-method="destroy">
- 
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-        destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/perfruns" />
-        <property name="username" value="root" />
-        <property name="password" value="mysql" />
-    </bean>
     <bean id="theQueue" class="java.util.concurrent.LinkedBlockingQueue"/>
    
    <bean id="Consume" class="com.nort.symc.mq.service.Consumer">

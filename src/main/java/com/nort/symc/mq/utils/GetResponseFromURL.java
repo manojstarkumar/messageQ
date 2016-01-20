@@ -11,7 +11,7 @@ import net.sf.json.JSONObject;
 public class GetResponseFromURL {
 	
 	public static boolean updateRunStatus(String buildNumber) throws IOException {
-		URL u = new URL(Constants.restUpdateUrl+buildNumber);
+		URL u = new URL(Constants.machineRoot + Constants.restUpdateUrl+buildNumber);
 		HttpURLConnection h = (HttpURLConnection) u.openConnection();
 		int responseCode = h.getResponseCode();
 		if(responseCode!=200) {
